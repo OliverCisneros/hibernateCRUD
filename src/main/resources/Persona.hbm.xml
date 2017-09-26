@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.prueba.entity">
+    <class name = "Persona" table="personOliver">
+        <!-- Mapping del id -->
+        <id name ="id" column="id">
+            <generator class="native"/>
+        </id>
+        
+        <!-- Mapping del nombre -->
+        <property name="fName" type="string" column="fname"/>
+        <property name="lName" type="string" column="lname"/>
+    </class>
+    
+    <!-- Esto aun no sirve -->
+      <sql-query name="llamarProcesoAlmacenado">
+	<return alias="persona" class="com.prueba.entity.Persona"/>
+	<![CDATA[CALL regresarpersona(:id)]]>
+    </sql-query>
+</hibernate-mapping>

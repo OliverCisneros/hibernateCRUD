@@ -1,0 +1,3 @@
+com\prueba\test\Test.class
+com\prueba\entity\Persona.class
+com\prueba\util\HibernateUtil.class

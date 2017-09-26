@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <!-- Config de la conexion a la BD -->
+        <property name = "connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <!-- Ubicacion de la BD -->
+        <property name = "connection.url">jdbc:sqlserver://192.168.0.25:1433;databaseName=backend</property>
+        <!-- Usuario de la BD -->
+        <property name = "connection.username">backend</property>
+        <!-- Contrasena de la BD -->
+        <property name = "connection.password">test</property>
+        
+        <!-- Dialecto SQL-->
+        <property name = "dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+        
+        <!--Mostrar en consola operaciones SQL-->
+        <property name = "show_sql">true</property>
+        
+        <!-- Usar mapping basado en XML -->
+        <mapping resource="Persona.hbm.xml"/>
+    </session-factory>
+
+</hibernate-configuration>
